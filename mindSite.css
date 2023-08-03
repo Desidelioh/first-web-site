@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --navColor: rgb(52, 20, 234);
+    --backColor: rgb(210, 30, 174);
+}
+
+h1 {
+    color: var(--navColor);
+    text-align: center;
+    padding-right: 300px;
+    font-size: 2em;
+}
+
+h2,
+h3,
+h4 {
+    color: var(--navColor);
+    text-align: left;
+
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+
+/* Button */
+
+.button1 {
+    background-color: palevioletred;
+    color: var(--navColor);
+    font-size: 25px;
+    border-radius: 5px;
+    transition: background-color 5s, width 2s, height 2s, font-size 2s;
+    text-decoration: none;
+    float: right;
+    display: inline;
+}
+
+
+.button2 {
+    background-color: rgb(151, 236, 150);
+    color: var(--navColor);
+    font-size: 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    float: right;
+    display: inline;
+}
+
+.button1:hover {
+    width: 200px;
+    height: 50px;
+    color: rgb(14, 14, 133);
+    font-size: 32px;
+    background-color: rgb(235, 89, 27);
+
+
+
+
+}
+
+.button2:hover {
+    background-color: rgb(92, 159, 237);
+
+}
+
+#tips li {
+    display: block;
+    list-style: none;
+}
+
+
+/* Nav bar */
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--navColor);
+    list-style: none;
+    overflow: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+li a:hover {
+    background-color: var(--backColor);
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: block;
+}
+
+ul li {
+    float: left;
+}
+
+.cascade {
+    display: none;
+    position: absolute;
+    background-color: var(--navColor);
+    width: 250px;
+    border: 1px solid;
+    border-radius: 5%;
+
+}
+
+.cascadeList {
+    display: inline-block;
+}
+
+.cascadeList:hover .cascade {
+    display: block;
+
+}
+
+.cascade a {
+    display: block;
+    text-align: left;
+}
+
+
+div .video1 {
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    transform: scale(.8);
+
+}
+
+div .map1 {
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    transform: scale(.7);
+
+}
+
+/* Grid container */
+
+.gridContainer {
+    display: grid;
+    background-color: whitesmoke;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        'header header header header header'
+        'nav nav nav nav nav'
+        'article1 article1 article1 article1 article1'
+        'video video article2 article2 article2'
+        'map map article3 article3 article3'
+        'footer footer footer footer footer';
+}
+
+.gridContainer header {
+    grid-area: header;
+}
+
+.gridContainer nav {
+    grid-area: nav;
+}
+
+.gridContainer .article1 {
+    grid-area: article1;
+
+}
+
+.gridContainer .video {
+    grid-area: video;
+
+}
+
+.gridContainer .map {
+    grid-area: map;
+
+}
+
+.gridContainer .article2 {
+    grid-area: article2;
+
+}
+
+.gridContainer .article3 {
+    grid-area: article3;
+
+}
+
+.gridContainer footer {
+    grid-area: footer;
+    background-color: var(--backColor);
+}
+
+#footer1 {
+    color: white;
+}
+
+footer li {
+    display: block;
+    list-style: none;
+    color: white;
+    font-size: 10px;
+    padding-left: 0px;
+}
+
+footer a:hover {
+    background-color: var(--navColor);
+
+}
+
+.mind {
+    text-align: center;
+}
+
+#better {
+    padding-left: 50px;
+}
+
+/* Media Query */
+
+@media (max-width:700px) and (min-width:480px) {
+    .gridContainer {
+        background-color: rgb(140, 190, 234);
+        font-size: 10px;
+
+    }
+
+    .logo {
+        width: 100px;
+        height: 50px;
+
+    }
+
+    #image {
+        width: 150px;
+        height: 70px;
+
+    }
+
+    div .video1 {
+        transform: scale(.3);
+
+    }
+
+    div .map1 {
+        transform: scale(.3);
+
+    }
+
+}
